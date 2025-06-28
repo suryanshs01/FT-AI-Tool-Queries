@@ -1,31 +1,5 @@
 # Neo4j Graph QA - Processing Results Report
 
-**Generated from checkpoint:** `freight_queries_all_prompts_checkpoint.csv`
-**Report generated on:** 2025-06-27 22:55:29
-
-## 📊 Executive Summary
-
-- **Total Queries Processed:** 13
-- **Successful:** 12 (92.3%)
-- **Failed:** 1 (7.7%)
-- **Average Attempts per Query:** 1.2
-- **Processing Period:** 2025-06-27 22:34 to 2025-06-27 22:41
-- **Total Processing Time:** 0:07:47.062326
-
-### 📈 Quick Statistics
-
-| Metric | Value |
-|--------|-------|
-| Success Rate | 92.3% |
-| Total Queries | 13 |
-| Successful | 12 |
-| Failed | 1 |
-| Avg Attempts | 1.2 |
-
----
-
-## ✅ Successful Query Results
-
 ### 🎯 Query 1 (Row 1)
 
 **Metadata:**
@@ -681,9 +655,3 @@ No result returned from QA system
 
 ---
 
-## 📋 Report Information
-
-- **Source Checkpoint:** `freight_queries_all_prompts_checkpoint.csv`
-- **Report Generated:** 2025-06-27 22:55:29
-- **Total Entries Processed:** 13
-- **Markdown File:** `freight_queries_all_prompts_report.md`
