@@ -1,13 +1,6 @@
 # Neo4j Graph QA - Processing Results Report
 
-## ✅ Successful Query Results
-
 ### 🎯 Query 1 (Row 1)
-
-**Metadata:**
-- **Timestamp:** 2025-06-27T22:34:02.132045
-- **Attempts:** 1
-- **Original Row:** 1
 
 #### 💬 User Query
 ```
@@ -36,11 +29,6 @@ RETURN avgFPT / weightedLead AS weighted_average_ptpk;
 ---
 
 ### 🎯 Query 2 (Row 2)
-
-**Metadata:**
-- **Timestamp:** 2025-06-27T22:34:26.751712
-- **Attempts:** 1
-- **Original Row:** 2
 
 #### 💬 User Query
 ```
@@ -92,11 +80,6 @@ ORDER BY distance_slab;
 
 ### 🎯 Query 3 (Row 3)
 
-**Metadata:**
-- **Timestamp:** 2025-06-27T22:35:09.050860
-- **Attempts:** 1
-- **Original Row:** 3
-
 #### 💬 User Query
 ```
 List distance slabs where weighted average PTPK is higher than previous slabs with lesser lead distances. Formula: Average freight per ton/ Weighted lead distance by dispatch quantity
@@ -146,11 +129,6 @@ No distance slab meets this criterion, as there is only one slab (0–100 km) an
 
 ### 🎯 Query 4 (Row 4)
 
-**Metadata:**
-- **Timestamp:** 2025-06-27T22:35:31.551903
-- **Attempts:** 1
-- **Original Row:** 4
-
 #### 💬 User Query
 ```
 Show PTPK by vehicle types (e.g., 6W, 10W, etc.) within 60-75 KM slab for trips. 
@@ -188,11 +166,6 @@ ORDER BY avgPTPK DESC
 ---
 
 ### 🎯 Query 5 (Row 5)
-
-**Metadata:**
-- **Timestamp:** 2025-06-28T14:21:02.595932
-- **Attempts:** 1
-- **Original Row:** 5
 
 #### 💬 User Query
 ```
@@ -234,11 +207,6 @@ ORDER BY avg_ptpk DESC
 ---
 
 ### 🎯 Query 6 (Row 6)
-
-**Metadata:**
-- **Timestamp:** 2025-06-28T14:02:15.488555
-- **Attempts:** 2
-- **Original Row:** 6
 
 #### 💬 User Query
 ```
@@ -306,11 +274,6 @@ ORDER BY vehicle_type, destination_with_shorter_lead_higher_ptpk;
 
 ### 🎯 Query 7 (Row 7)
 
-**Metadata:**
-- **Timestamp:** 2025-06-28T14:03:18.814103
-- **Attempts:** 2
-- **Original Row:** 7
-
 #### 💬 User Query
 ```
 List destinations with significantly different PTPK values despite for a given vehicle type
@@ -351,11 +314,6 @@ ORDER BY ptpkRange DESC
 ---
 
 ### 🎯 Query 8 (Row 8)
-
-**Metadata:**
-- **Timestamp:** 2025-06-28T14:22:27.930264
-- **Attempts:** 1
-- **Original Row:** 8
 
 #### 💬 User Query
 ```
@@ -399,11 +357,6 @@ I don’t know the answer.
 ---
 
 ### 🎯 Query 9 (Row 9)
-
-**Metadata:**
-- **Timestamp:** 2025-06-27T22:39:28.474834
-- **Attempts:** 2
-- **Original Row:** 9
 
 #### 💬 User Query
 ```
@@ -459,11 +412,6 @@ ORDER BY sob_percentage DESC;
 
 ### 🎯 Query 10 (Row 10)
 
-**Metadata:**
-- **Timestamp:** 2025-06-27T22:39:47.840194
-- **Attempts:** 1
-- **Original Row:** 10
-
 #### 💬 User Query
 ```
 Show PTPK by different vehicle types (e.g., 6W, 10W) for each lane 
@@ -513,11 +461,6 @@ ORDER BY origin, destination, vehicle_type
 
 ### 🎯 Query 11 (Row 11)
 
-**Metadata:**
-- **Timestamp:** 2025-06-28T14:22:59.190859
-- **Attempts:** 1
-- **Original Row:** 11
-
 #### 💬 User Query
 ```
 Show PTPK by vehicle categories (own, attached, market) on lanes 
@@ -546,11 +489,6 @@ I don’t know the answer.
 ---
 
 ### 🎯 Query 12 (Row 12)
-
-**Metadata:**
-- **Timestamp:** 2025-06-28T14:03:57.012165
-- **Attempts:** 1
-- **Original Row:** 12
 
 #### 💬 User Query
 ```
@@ -584,11 +522,6 @@ RETURN t.name AS transporter, best_ptpk;
 
 ### 🎯 Query 13 (Row 13)
 
-**Metadata:**
-- **Timestamp:** 2025-06-28T14:24:15.857688
-- **Attempts:** 1
-- **Original Row:** 13
-
 #### 💬 User Query
 ```
 Show monthly SOB% of best performing transporter (% of total lane volume for specified vehicle type 6W)
@@ -615,11 +548,6 @@ Show monthly SOB% of best performing transporter (% of total lane volume for spe
 ---
 
 ### 🎯 Query 14 (Row 14)
-
-**Metadata:**
-- **Timestamp:** 2025-06-28T14:06:32.006680
-- **Attempts:** 1
-- **Original Row:** 14
 
 #### 💬 User Query
 ```
@@ -689,11 +617,6 @@ RETURN origin,
 ---
 
 ### 🎯 Query 15 (Row 15)
-
-**Metadata:**
-- **Timestamp:** 2025-06-28T00:35:41.162994
-- **Attempts:** 1
-- **Original Row:** 15
 
 #### 💬 User Query
 ```
@@ -766,11 +689,6 @@ ORDER BY total_freight_saving DESC
 
 ### 🎯 Query 16 (Row 16)
 
-**Metadata:**
-- **Timestamp:** 2025-06-28T00:36:18.309308
-- **Attempts:** 1
-- **Original Row:** 16
-
 #### 💬 User Query
 ```
 Show the list of vehicles in descending order of total KMs travelled in last 1 year time period.
@@ -808,11 +726,6 @@ RETURN vehicle_number, vehicle_type, total_km
 ---
 
 ### 🎯 Query 17 (Row 17)
-
-**Metadata:**
-- **Timestamp:** 2025-06-28T00:36:54.481700
-- **Attempts:** 1
-- **Original Row:** 17
 
 #### 💬 User Query
 ```
@@ -852,11 +765,6 @@ ORDER BY number_of_trips DESC
 ---
 
 ### 🎯 Query 18 (Row 18)
-
-**Metadata:**
-- **Timestamp:** 2025-06-28T00:37:25.645527
-- **Attempts:** 1
-- **Original Row:** 18
 
 #### 💬 User Query
 ```
@@ -899,11 +807,6 @@ ORDER BY lane_count DESC
 ---
 
 ### 🎯 Query 19 (Row 19)
-
-**Metadata:**
-- **Timestamp:** 2025-06-28T00:37:53.222969
-- **Attempts:** 1
-- **Original Row:** 19
 
 #### 💬 User Query
 ```
@@ -951,11 +854,6 @@ ORDER BY
 
 ### 🎯 Query 20 (Row 20)
 
-**Metadata:**
-- **Timestamp:** 2025-06-28T00:38:08.628277
-- **Attempts:** 1
-- **Original Row:** 20
-
 #### 💬 User Query
 ```
 Show the list ofvehicles that have completed more than 15 trips 
@@ -992,11 +890,6 @@ ORDER BY trips DESC
 
 ### 🎯 Query 21 (Row 21)
 
-**Metadata:**
-- **Timestamp:** 2025-06-28T00:39:48.031356
-- **Attempts:** 2
-- **Original Row:** 21
-
 #### 💬 User Query
 ```
 What % of vehicles have done trips on 1, 2-4, 5-10, and >10 lanes per month
@@ -1021,11 +914,6 @@ What % of vehicles have done trips on 1, 2-4, 5-10, and >10 lanes per month
 ---
 
 ### 🎯 Query 22 (Row 22)
-
-**Metadata:**
-- **Timestamp:** 2025-06-28T00:40:46.242137
-- **Attempts:** 1
-- **Original Row:** 22
 
 #### 💬 User Query
 ```
@@ -1069,11 +957,6 @@ RETURN v.vehicle_number AS vehicleNumber,
 ---
 
 ### 🎯 Query 23 (Row 23)
-
-**Metadata:**
-- **Timestamp:** 2025-06-28T00:43:49.055400
-- **Attempts:** 1
-- **Original Row:** 23
 
 #### 💬 User Query
 ```
@@ -1125,11 +1008,6 @@ ORDER BY CASE distance_bucket
 
 ### 🎯 Query 24 (Row 24)
 
-**Metadata:**
-- **Timestamp:** 2025-06-28T00:44:27.952547
-- **Attempts:** 1
-- **Original Row:** 24
-
 #### 💬 User Query
 ```
 List the vehicles that have completed more than 2000 kms, including transporter name, trip count, and avg. lead distance.
@@ -1175,11 +1053,6 @@ ORDER BY totalDistanceKm DESC;
 
 ### 🎯 Query 25 (Row 25)
 
-**Metadata:**
-- **Timestamp:** 2025-06-28T01:25:52.575825
-- **Attempts:** 1
-- **Original Row:** 25
-
 #### 💬 User Query
 ```
 What is the average and median parking waiting time for 6W vehicles from Dankuni to Tiljala?
@@ -1209,11 +1082,6 @@ RETURN avg(tm.parking_duration_hr) AS averageParkingWaitingTime,
 ---
 
 ### 🎯 Query 26 (Row 26)
-
-**Metadata:**
-- **Timestamp:** 2025-06-28T00:45:21.461928
-- **Attempts:** 1
-- **Original Row:** 26
 
 #### 💬 User Query
 ```
@@ -1256,11 +1124,6 @@ ORDER BY vehicle_type;
 ---
 
 ### 🎯 Query 27 (Row 27)
-
-**Metadata:**
-- **Timestamp:** 2025-06-28T13:37:22.620813
-- **Attempts:** 2
-- **Original Row:** 27
 
 #### 💬 User Query
 ```
@@ -1309,11 +1172,6 @@ ORDER BY period, year, time_unit;
 
 ### 🎯 Query 28 (Row 28)
 
-**Metadata:**
-- **Timestamp:** 2025-06-28T12:09:54.204243
-- **Attempts:** 1
-- **Original Row:** 28
-
 #### 💬 User Query
 ```
 What is the average and median loading time (plant entry to exit) 
@@ -1338,11 +1196,6 @@ RETURN avg(tm.loading_duration_hr) AS average_loading_time_hr,
 ---
 
 ### 🎯 Query 29 (Row 29)
-
-**Metadata:**
-- **Timestamp:** 2025-06-28T12:10:14.675943
-- **Attempts:** 1
-- **Original Row:** 29
 
 #### 💬 User Query
 ```
@@ -1373,11 +1226,6 @@ ORDER BY vehicle_type
 ---
 
 ### 🎯 Query 30 (Row 30)
-
-**Metadata:**
-- **Timestamp:** 2025-06-28T13:00:17.984531
-- **Attempts:** 2
-- **Original Row:** 30
 
 #### 💬 User Query
 ```
@@ -1411,11 +1259,6 @@ Cypher query not found in intermediate steps
 
 ### 🎯 Query 31 (Row 31)
 
-**Metadata:**
-- **Timestamp:** 2025-06-28T14:24:46.783113
-- **Attempts:** 1
-- **Original Row:** 31
-
 #### 💬 User Query
 ```
 What is the average and median transit time from Dankuni to Tiljala. Consider location case insensitive
@@ -1447,11 +1290,6 @@ RETURN avg(transit_hours) AS average_transit_time_hours,
 ---
 
 ### 🎯 Query 32 (Row 32)
-
-**Metadata:**
-- **Timestamp:** 2025-06-28T14:25:14.799852
-- **Attempts:** 1
-- **Original Row:** 32
 
 #### 💬 User Query
 ```
@@ -1489,11 +1327,6 @@ RETURN vehicle_type,
 ---
 
 ### 🎯 Query 33 (Row 33)
-
-**Metadata:**
-- **Timestamp:** 2025-06-28T14:07:56.970155
-- **Attempts:** 3
-- **Original Row:** 33
 
 #### 💬 User Query
 ```
@@ -1539,11 +1372,6 @@ ORDER BY trip_count DESC;
 ---
 
 ### 🎯 Query 34 (Row 34)
-
-**Metadata:**
-- **Timestamp:** 2025-06-28T14:08:36.626095
-- **Attempts:** 1
-- **Original Row:** 34
 
 #### 💬 User Query
 ```
@@ -1594,11 +1422,6 @@ ORDER BY dispatch_window;
 
 ### 🎯 Query 35 (Row 35)
 
-**Metadata:**
-- **Timestamp:** 2025-06-28T14:26:20.213923
-- **Attempts:** 1
-- **Original Row:** 35
-
 #### 💬 User Query
 ```
 Show weekly/monthly trend of average and median transit time for 6W vehicles from Dankuni to Tiljala. Consider location case insensitive
@@ -1636,11 +1459,6 @@ Show weekly/monthly trend of average and median transit time for 6W vehicles fro
 ---
 
 ### 🎯 Query 36 (Row 36)
-
-**Metadata:**
-- **Timestamp:** 2025-06-28T14:27:10.068473
-- **Attempts:** 1
-- **Original Row:** 36
 
 #### 💬 User Query
 ```
@@ -1686,11 +1504,6 @@ RETURN t.name AS transporter,
 
 ### 🎯 Query 37 (Row 37)
 
-**Metadata:**
-- **Timestamp:** 2025-06-28T14:12:51.343805
-- **Attempts:** 2
-- **Original Row:** 37
-
 #### 💬 User Query
 ```
 What is the best dispatch time slot from Dankuni to Tiljala for 6W vehicles for least transit time (avg/median) with more than 3 trips? Consider location case insensitive
@@ -1713,11 +1526,6 @@ What is the best dispatch time slot from Dankuni to Tiljala for 6W vehicles for 
 ---
 
 ### 🎯 Query 38 (Row 38)
-
-**Metadata:**
-- **Timestamp:** 2025-06-28T14:13:24.971964
-- **Attempts:** 1
-- **Original Row:** 38
 
 #### 💬 User Query
 ```
@@ -1752,11 +1560,6 @@ RETURN CASE
 
 ### 🎯 Query 39 (Row 39)
 
-**Metadata:**
-- **Timestamp:** 2025-06-28T13:07:26.795294
-- **Attempts:** 1
-- **Original Row:** 39
-
 #### 💬 User Query
 ```
 What is the average unloading time?
@@ -1778,11 +1581,6 @@ RETURN avg(t.unloading_duration_hr) AS average_unloading_time
 ---
 
 ### 🎯 Query 40 (Row 40)
-
-**Metadata:**
-- **Timestamp:** 2025-06-28T13:07:40.952778
-- **Attempts:** 1
-- **Original Row:** 40
 
 #### 💬 User Query
 ```
@@ -1813,11 +1611,6 @@ ORDER BY avg_unloading_time_hr DESC
 ---
 
 ### 🎯 Query 41 (Row 41)
-
-**Metadata:**
-- **Timestamp:** 2025-06-28T13:08:06.426011
-- **Attempts:** 1
-- **Original Row:** 41
 
 #### 💬 User Query
 ```
@@ -1863,11 +1656,6 @@ ORDER BY customer_group, avg_unloading_time DESC
 
 ### 🎯 Query 42 (Row 42)
 
-**Metadata:**
-- **Timestamp:** 2025-06-28T13:08:38.514772
-- **Attempts:** 1
-- **Original Row:** 42
-
 #### 💬 User Query
 ```
 Show average unloading time based on destination geo-fence entry timing (6 AM to 10 AM, 10 AM to 2 PM, 10 PM to 2 AM, etc.)
@@ -1906,11 +1694,6 @@ ORDER BY time_window;
 
 ### 🎯 Query 43 (Row 43)
 
-**Metadata:**
-- **Timestamp:** 2025-06-28T14:14:11.823769
-- **Attempts:** 1
-- **Original Row:** 43
-
 #### 💬 User Query
 ```
 What is the most ideal unloading time window for least detention at customer Tiljala. Consider location case insensitive
@@ -1943,11 +1726,6 @@ LIMIT 1
 
 ### 🎯 Query 44 (Row 44)
 
-**Metadata:**
-- **Timestamp:** 2025-06-28T14:14:40.006329
-- **Attempts:** 1
-- **Original Row:** 44
-
 #### 💬 User Query
 ```
 What % of trips reach Tiljala during the ideal unloading time window
@@ -1974,11 +1752,6 @@ RETURN CASE
 ---
 
 ### 🎯 Query 45 (Row 45)
-
-**Metadata:**
-- **Timestamp:** 2025-06-28T14:27:51.791349
-- **Attempts:** 1
-- **Original Row:** 45
 
 #### 💬 User Query
 ```
@@ -2017,11 +1790,6 @@ Show weekly/monthly trend of unloading time for 6W vehicles reaching Tiljala. Co
 ---
 
 ### 🎯 Query 46 (Row 46)
-
-**Metadata:**
-- **Timestamp:** 2025-06-28T13:10:52.053807
-- **Attempts:** 1
-- **Original Row:** 46
 
 #### 💬 User Query
 ```
@@ -2105,11 +1873,6 @@ ORDER BY total_volume DESC;
 
 ### 🎯 Query 47 (Row 47)
 
-**Metadata:**
-- **Timestamp:** 2025-06-28T13:11:30.854066
-- **Attempts:** 1
-- **Original Row:** 47
-
 #### 💬 User Query
 ```
 Which are the top 5 lanes by freight spend for 6W vehicles? Show % of total spend and MoM trend.
@@ -2137,11 +1900,6 @@ Which are the top 5 lanes by freight spend for 6W vehicles? Show % of total spen
 
 ### 🎯 Query 48 (Row 48)
 
-**Metadata:**
-- **Timestamp:** 2025-06-28T13:11:39.246983
-- **Attempts:** 1
-- **Original Row:** 48
-
 #### 💬 User Query
 ```
 What is the total number of trips from Dankuni to Tiljala for 6W vehicles? Consider all cases of location
@@ -2167,11 +1925,6 @@ RETURN count(d) AS total_trips
 ---
 
 ### 🎯 Query 49 (Row 49)
-
-**Metadata:**
-- **Timestamp:** 2025-06-28T14:15:29.987847
-- **Attempts:** 1
-- **Original Row:** 49
 
 #### 💬 User Query
 ```
@@ -2203,11 +1956,6 @@ ORDER BY trips DESC;
 ---
 
 ### 🎯 Query 50 (Row 50)
-
-**Metadata:**
-- **Timestamp:** 2025-06-28T14:15:47.188641
-- **Attempts:** 1
-- **Original Row:** 50
 
 #### 💬 User Query
 ```
@@ -2244,11 +1992,6 @@ RETURN t.name AS transporter, count(d) AS trips
 ---
 
 ### 🎯 Query 51 (Row 51)
-
-**Metadata:**
-- **Timestamp:** 2025-06-28T14:16:06.883312
-- **Attempts:** 1
-- **Original Row:** 51
 
 #### 💬 User Query
 ```
@@ -2289,11 +2032,6 @@ ORDER BY trips DESC
 
 ### 🎯 Query 52 (Row 52)
 
-**Metadata:**
-- **Timestamp:** 2025-06-28T14:16:29.303768
-- **Attempts:** 1
-- **Original Row:** 52
-
 #### 💬 User Query
 ```
 Show number of trips by individual vehicle numbers for 6W vehicles from Dankuni to Tiljala. Consider location case insensitive
@@ -2332,11 +2070,6 @@ ORDER BY tripCount DESC
 
 ### 🎯 Query 53 (Row 53)
 
-**Metadata:**
-- **Timestamp:** 2025-06-28T14:16:48.000118
-- **Attempts:** 1
-- **Original Row:** 53
-
 #### 💬 User Query
 ```
 How many distinct vehicles have done deliveries from Dankuni to Tiljala? Show count by vehicle type. Consider location case insensitive
@@ -2366,11 +2099,6 @@ ORDER BY vehicle_count DESC
 ---
 
 ### 🎯 Query 54 (Row 54)
-
-**Metadata:**
-- **Timestamp:** 2025-06-28T14:17:29.799571
-- **Attempts:** 1
-- **Original Row:** 54
 
 #### 💬 User Query
 ```
@@ -2411,11 +2139,6 @@ RETURN size(stats) AS distinct_transporters,
 ---
 
 ### 🎯 Query 55 (Row 55)
-
-**Metadata:**
-- **Timestamp:** 2025-06-28T13:13:23.073969
-- **Attempts:** 1
-- **Original Row:** 55
 
 #### 💬 User Query
 ```
@@ -2458,11 +2181,6 @@ ORDER BY volume DESC
 
 ### 🎯 Query 56 (Row 56)
 
-**Metadata:**
-- **Timestamp:** 2025-06-28T13:14:41.856865
-- **Attempts:** 2
-- **Original Row:** 56
-
 #### 💬 User Query
 ```
 Which lanes have more than 5 transporters operating on the lane? Show volume/SOB% of top transporter on each.
@@ -2499,11 +2217,6 @@ None of the lanes listed have more than five transporters operating on them, so 
 ---
 
 ### 🎯 Query 57 (Row 57)
-
-**Metadata:**
-- **Timestamp:** 2025-06-28T13:15:04.394711
-- **Attempts:** 1
-- **Original Row:** 57
 
 #### 💬 User Query
 ```
@@ -2550,6 +2263,6 @@ ORDER BY sob_percentage DESC
 ## 📋 Report Information
 
 - **Source Checkpoint:** `freight_queries_all_prompts_checkpoint.csv`
-- **Report Generated:** 2025-06-28 14:30:17
+- **Report Generated:** 2025-06-28 14:34:31
 - **Total Entries Processed:** 57
 - **Markdown File:** `freight_queries_all_prompts_report.md`
