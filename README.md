@@ -21,12 +21,9 @@ RETURN avgFPT / weightedLead AS weighted_average_ptpk;
 
 **Formatted Result:**
 ```markdown
-Original Query: What is the overall weighted average PTPK? 
-Formula: Average freight per ton / Weighted lead distance by dispatch quantity
-
-| Metric                        | Value               |
-|-------------------------------|---------------------|
-| Overall Weighted Average PTPK | 8.425318017855947   |
+| Metric                     | Value                |
+|----------------------------|----------------------|
+| Overall Weighted Average PTPK | 8.425318017855947    |
 ```
 
 ---
@@ -66,15 +63,13 @@ ORDER BY distance_slab;
 
 **Formatted Result:**
 ```markdown
-Original Query: Show weighted average PTPK segmented by distance slabs (e.g., 0-15 KM, 16-30 KM, etc.). Formula: Average freight per ton/ Weighted lead distance by dispatch quantity
-
 | Distance Slab | Weighted-Average PTPK |
-|---------------|------------------------|
-| 0 – 15 KM     | 23.99                  |
-| 16 – 30 KM    | 14.69                  |
-| 31 – 45 KM    | 11.60                  |
-| 46 – 60 KM    | 10.17                  |
-| 60 + KM       | 6.71                   |
+|---------------|-----------------------|
+| 0 – 15 KM     | 23.99                 |
+| 16 – 30 KM    | 14.69                 |
+| 31 – 45 KM    | 11.60                 |
+| 46 – 60 KM    | 10.17                 |
+| 60 + KM       | 6.71                  |
 ```
 
 ---
@@ -189,18 +184,18 @@ ORDER BY avg_ptpk DESC
 
 **Formatted Result:**
 ```markdown
-| Location    | PTPK | Lead Distance (km) | Min (km) | Max (km) | Avg (km) |
-|-------------|------|--------------------|----------|----------|----------|
-| GHATAKPUKUR | 11.23| 60                 | 60       | 60       | 60       |
-| NODAKHALI   | 10.71| 61                 | 61       | 61       | 61       |
-| DOSTIPUR    | 10.69| 70                 | 70       | 70       | 70       |
-| PIYALI      | 10.46| 67                 | 67       | 67       | 67       |
-| CHAMPAHATI  | 10.34| 64                 | 64       | 64       | 64       |
-| FATEHPUR    | 10.32| 62                 | 62       | 62       | 62       |
-| SIRAKOL     | 10.28| 60                 | 60       | 60       | 60       |
-| SUBHASHGRAM | 10.21| 60                 | 60       | 60       | 60       |
-| DHANPOTA    | 10.17| 72                 | 72       | 72       | 72       |
-| HARINGHATA  | 10.14| 63                 | 63       | 63       | 63       |
+| Location    | PTPK  | Lead Distance (km) | Min (km) | Max (km) | Avg (km) |
+|-------------|-------|--------------------|----------|----------|----------|
+| GHATAKPUKUR | 11.23 | 60                 | 60       | 60       | 60       |
+| NODAKHALI   | 10.71 | 61                 | 61       | 61       | 61       |
+| DOSTIPUR    | 10.69 | 70                 | 70       | 70       | 70       |
+| PIYALI      | 10.46 | 67                 | 67       | 67       | 67       |
+| CHAMPAHATI  | 10.34 | 64                 | 64       | 64       | 64       |
+| FATEHPUR    | 10.32 | 62                 | 62       | 62       | 62       |
+| SIRAKOL     | 10.28 | 60                 | 60       | 60       | 60       |
+| SUBHASHGRAM | 10.21 | 60                 | 60       | 60       | 60       |
+| DHANPOTA    | 10.17 | 72                 | 72       | 72       | 72       |
+| HARINGHATA  | 10.14 | 63                 | 63       | 63       | 63       |
 ```
 
 ---
@@ -254,19 +249,19 @@ ORDER BY vehicle_type, destination_with_shorter_lead_higher_ptpk;
 
 **Formatted Result:**
 ```markdown
-| Destination         | Cost (₹/t-km) | Volume (%) | Lead (km) |
-|---------------------|---------------|------------|-----------|
-| AGARPARA            | 9.63          | 4          | 38        |
-| SONAKHALI           | 8.38          | 5          | 102       |
-| JHARGRAM            | 4.13          | 36         | 174.78    |
-| GAZNA (BAGULA)      | 5.52          | 35         | 130.84    |
-| SWARUPNAGAR         | 7.17          | 6          | 80        |
-| DIAMOND HARBOUR     | 8.23          | 26         | 75        |
-| JAMTALA HAT         | 6.78          | 2          | 102       |
-| CANNING             | 7.91          | 8          | 90        |
-| SUBHASHGRAM         | 8.55          | 5          | 60        |
-| NOORPUR (DH)        | 8.33          | 10         | 74        |
-| KULPI               | 7.45          | 11         | 97        |
+| Destination       | Cost (₹/t-km) | Volume (%) | Lead (km) |
+|-------------------|---------------|------------|-----------|
+| AGARPARA          | 9.63          | 4          | 38        |
+| SONAKHALI         | 8.38          | 5          | 102       |
+| JHARGRAM          | 4.13          | 36         | 174.78    |
+| GAZNA (BAGULA)    | 5.52          | 35         | 130.84    |
+| SWARUPNAGAR       | 7.17          | 6          | 80        |
+| DIAMOND HARBOUR   | 8.23          | 26         | 75        |
+| JAMTALA HAT       | 6.78          | 2          | 102       |
+| CANNING           | 7.91          | 8          | 90        |
+| SUBHASHGRAM       | 8.55          | 5          | 60        |
+| NOORPUR (DH)      | 8.33          | 10         | 74        |
+| KULPI             | 7.45          | 11         | 97        |
 ```
 
 ---
@@ -384,18 +379,18 @@ ORDER BY sob_percentage DESC;
 
 **Formatted Result:**
 ```markdown
-| Origin   | Destination        | Transporter | SOB  | PTPK |
-|----------|--------------------|-------------|------|------|
-| DANKUNI  | SANTOSHPUR(J)      | 11          | 100% | 9.14 |
-| DANKUNI  | NAKTALA            | 11          | 100% | 11.35|
-| DANKUNI  | JUMAINASKAR HAT    | 11          | 100% | 8.08 |
-| DANKUNI  | HOWRAH(CMC)        | 11          | 100% | 10.23|
-| DANKUNI  | BELEBERA           | 7           | 100% | 3.85 |
-| DANKUNI  | PETBINDHI          | 7           | 100% | 4.03 |
-| DANKUNI  | NARAYANGARH        | 7           | 100% | 4.23 |
-| DANKUNI  | BELPAHARI          | 7           | 100% | 3.79 |
-| DANKUNI  | PALPARA (CHAKDAH)  | 2           | 100% | 7.92 |
-| DANKUNI  | DASGHARA           | 2           | 100% | 7.07 |
+| Origin   | Destination         | Transporter | SOB  | PTPK |
+|----------|---------------------|-------------|------|------|
+| DANKUNI  | SANTOSHPUR(J)       | 11          | 100% | 9.14 |
+| DANKUNI  | NAKTALA             | 11          | 100% | 11.35|
+| DANKUNI  | JUMAINASKAR HAT     | 11          | 100% | 8.08 |
+| DANKUNI  | HOWRAH(CMC)         | 11          | 100% | 10.23|
+| DANKUNI  | BELEBERA            | 7           | 100% | 3.85 |
+| DANKUNI  | PETBINDHI           | 7           | 100% | 4.03 |
+| DANKUNI  | NARAYANGARH         | 7           | 100% | 4.23 |
+| DANKUNI  | BELPAHARI           | 7           | 100% | 3.79 |
+| DANKUNI  | PALPARA (CHAKDAH)   | 2           | 100% | 7.92 |
+| DANKUNI  | DASGHARA            | 2           | 100% | 7.07 |
 ```
 
 ---
@@ -1039,17 +1034,17 @@ ORDER BY totalDistanceKm DESC;
 **Formatted Result:**
 ```markdown
 | Vehicle ID   | Transporter   | Trips | Average Lead Distance (km) |
-|--------------|---------------|-------|-----------------------------|
-| WB25L1255    | Transporter 3 | 52    | 130.00                      |
-| WB11F8931    | Transporter 1 | 47    | 134.51                      |
-| WB25L0212    | Transporter 3 | 42    | 129.45                      |
-| WB25L2465    | Transporter 3 | 41    | 130.00                      |
-| WB59C6972    | Transporter 3 | 30    | 155.43                      |
-| WB19F7384    | Transporter 3 | 30    | 146.50                      |
-| WB03C9043    | Transporter 18| 41    | 89.17                       |
-| WB11F5942    | Transporter 1 | 39    | 111.62                      |
-| WB23E5855    | Transporter 12| 39    | 91.15                       |
-| WB19F5503    | Transporter 11| 56    | 64.09                       |
+|--------------|---------------|-------|----------------------------|
+| WB25L1255    | Transporter 3 | 52    | 130.00                     |
+| WB11F8931    | Transporter 1 | 47    | 134.51                     |
+| WB25L0212    | Transporter 3 | 42    | 129.45                     |
+| WB25L2465    | Transporter 3 | 41    | 130.00                     |
+| WB59C6972    | Transporter 3 | 30    | 155.43                     |
+| WB19F7384    | Transporter 3 | 30    | 146.50                     |
+| WB03C9043    | Transporter 18| 41    | 89.17                      |
+| WB11F5942    | Transporter 1 | 39    | 111.62                     |
+| WB23E5855    | Transporter 12| 39    | 91.15                      |
+| WB19F5503    | Transporter 11| 56    | 64.09                      |
 ```
 
 ---
@@ -1077,7 +1072,7 @@ RETURN avg(tm.parking_duration_hr) AS averageParkingWaitingTime,
 #### 📋 Query Results
 
 **Formatted Result:**
-```
+```markdown
 | Metric                | Time (minutes) |
 |-----------------------|----------------|
 | Average Waiting Time  | 15.92          |
@@ -1172,7 +1167,7 @@ ORDER BY period, year, time_unit;
 | 40   | 7.88                | 4.26                  |
 | 41   | 9.75                | 4.03                  |
 | 42   | 6.61                | 3.33                  |
-| 43   | 14.08               | 6.37                  |
+| 43   | 14.08              | 6.37                  |
 | 44   | 6.53                | 3.35                  |
 | 45   | 8.64                | 3.13                  |
 ```
@@ -1198,10 +1193,10 @@ RETURN avg(tm.loading_duration_hr) AS average_loading_time_hr,
 
 **Formatted Result:**
 ```markdown
-| Metric              | Time (hours) |
-|---------------------|--------------|
-| Average Loading Time| 1.21         |
-| Median Loading Time | 1.16         |
+| Metric               | Time (hours) |
+|----------------------|--------------|
+| Average Loading Time | 1.21         |
+| Median Loading Time  | 1.16         |
 ```
 
 ---
@@ -1227,13 +1222,13 @@ ORDER BY vehicle_type
 
 **Formatted Result:**
 ```markdown
-| Vehicle Type         | Average Loading Time (hr) | Median Loading Time (hr) |
-|----------------------|---------------------------|--------------------------|
-| 10W                  | 1.28                      | 1.17                     |
-| 12W                  | 1.30                      | 1.25                     |
-| 14W+                 | 1.57                      | 1.34                     |
-| 6W                   | 1.16                      | 1.13                     |
-| Unspecified Vehicle  | 1.13                      | 1.14                     |
+| Vehicle Type        | Average Loading Time (hr) | Median Loading Time (hr) |
+|---------------------|---------------------------|--------------------------|
+| 10W                 | 1.28                      | 1.17                     |
+| 12W                 | 1.30                      | 1.25                     |
+| 14W+                | 1.57                      | 1.34                     |
+| 6W                  | 1.16                      | 1.13                     |
+| Unspecified Vehicle | 1.13                      | 1.14                     |
 ```
 
 ---
@@ -1665,18 +1660,18 @@ ORDER BY customer_group, avg_unloading_time DESC
 
 **Formatted Result:**
 ```markdown
-| Customer Group   | Customer Name   | Unloading Time (hrs) |
-|------------------|-----------------|----------------------|
-| KEY              | HARIT           | 9.91                 |
-|                  | BHANGAR         | 3.4725               |
-|                  | NANDAKUMAR      | 3.4325               |
-|                  | JAGACHA         | 1.1575               |
-|                  | DOMJUR          | 0.5965               |
-| NTRD             | ARAMBAGH        | 16.8667              |
-|                  | HARINGHATA      | 11.6363              |
-|                  | RAICHAK         | 11.25                |
-|                  | SAMUDRAGARH     | 9.0                  |
-|                  | DULAGARH        | 8.7527               |
+| Customer Group | Customer Name | Unloading Time (hrs) |
+|----------------|---------------|-----------------------|
+| KEY            | HARIT         | 9.91                  |
+|                | BHANGAR       | 3.4725                |
+|                | NANDAKUMAR    | 3.4325                |
+|                | JAGACHA       | 1.1575                |
+|                | DOMJUR        | 0.5965                |
+| NTRD           | ARAMBAGH      | 16.8667               |
+|                | HARINGHATA    | 11.6363               |
+|                | RAICHAK       | 11.25                 |
+|                | SAMUDRAGARH   | 9.0                   |
+|                | DULAGARH      | 8.7527                |
 ```
 
 ---
@@ -1776,11 +1771,8 @@ RETURN CASE
 
 #### 📋 Query Results
 
-**Formatted Result:**
 ```
-| Query                                      | Result |
-|--------------------------------------------|--------|
-| What % of trips reach Tiljala during the ideal unloading time window | 0%     |
+0%
 ```
 
 ---
@@ -1952,7 +1944,7 @@ RETURN count(d) AS total_trips
 #### 📋 Query Results
 
 **Formatted Result:**
-```
+```markdown
 | Route              | Vehicle Type | Total Trips |
 |--------------------|--------------|-------------|
 | Dankuni to Tiljala | 6W           |           0 |
@@ -2095,7 +2087,7 @@ ORDER BY tripCount DESC
 #### 📋 Query Results
 
 **Formatted Result:**
-```
+```markdown
 | Code       | Trips |
 |------------|-------|
 | WB07K2405  |    48 |
@@ -2133,7 +2125,7 @@ ORDER BY vehicle_count DESC
 #### 📋 Query Results
 
 **Formatted Result:**
-```
+```markdown
 | Vehicle Type | Deliveries |
 |--------------|------------|
 | 6W           | 53         |
@@ -2315,6 +2307,6 @@ ORDER BY sob_percentage DESC
 ## 📋 Report Information
 
 - **Source Checkpoint:** `.\freight_queries_all_prompts_checkpoint_formatted.csv`
-- **Report Generated:** 2025-06-29 13:20:13
+- **Report Generated:** 2025-06-29 13:33:29
 - **Total Entries Processed:** 57
 - **Markdown File:** `freight_queries_all_prompts_formatted_report.md`
