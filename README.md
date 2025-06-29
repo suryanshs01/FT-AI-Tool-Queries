@@ -832,14 +832,14 @@ ORDER BY
 #### 📋 Query Results
 
 **Formatted Result:**
-```markdown
+
 | Trip Count         | Percentage |
 |--------------------|------------|
 | 0 – 5 trips        | 32.89 %    |
 | 5 – 10 trips       | 14.01 %    |
 | 10 – 15 trips      | 14.01 %    |
 | More than 15 trips | 39.10 %    |
-```
+
 
 ---
 
