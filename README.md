@@ -20,11 +20,14 @@ RETURN avgFPT / weightedLead AS weighted_average_ptpk;
 #### 📋 Query Results
 
 **Formatted Result:**
-| Metric                     | Value                |
+```markdown
+Original Query: What is the overall weighted average PTPK? 
+Formula: Average freight per ton / Weighted lead distance by dispatch quantity
 
-|----------------------------|----------------------|
-
-| Overall Weighted Average PTPK | 8.425318017855947    |
+| Metric                        | Value               |
+|-------------------------------|---------------------|
+| Overall Weighted Average PTPK | 8.425318017855947   |
+```
 
 ---
 
@@ -62,19 +65,17 @@ ORDER BY distance_slab;
 #### 📋 Query Results
 
 **Formatted Result:**
+```markdown
+Original Query: Show weighted average PTPK segmented by distance slabs (e.g., 0-15 KM, 16-30 KM, etc.). Formula: Average freight per ton/ Weighted lead distance by dispatch quantity
+
 | Distance Slab | Weighted-Average PTPK |
-
-|----------------|------------------------|
-
-| 0 – 15 KM      | 23.99                  |
-
-| 16 – 30 KM     | 14.69                  |
-
-| 31 – 45 KM     | 11.60                  |
-
-| 46 – 60 KM     | 10.17                  |
-
-| 60 + KM        | 6.71                   |
+|---------------|------------------------|
+| 0 – 15 KM     | 23.99                  |
+| 16 – 30 KM    | 14.69                  |
+| 31 – 45 KM    | 11.60                  |
+| 46 – 60 KM    | 10.17                  |
+| 60 + KM       | 6.71                   |
+```
 
 ---
 
@@ -149,19 +150,15 @@ ORDER BY avgPTPK DESC
 #### 📋 Query Results
 
 **Formatted Result:**
-| Vehicle Type               | PTPK  |
-
-|----------------------------|-------|
-
-| 6W                         | 9.64  |
-
-| 10W                        | 7.60  |
-
-| 12W                        | 7.23  |
-
-| 14W+                       | 6.16  |
-
-| Unspecified vehicle type    | 9.34  |
+```markdown
+| Vehicle Type            | PTPK |
+|-------------------------|------|
+| 6W                      | 9.64 |
+| 10W                     | 7.60 |
+| 12W                     | 7.23 |
+| 14W+                    | 6.16 |
+| Unspecified vehicle type| 9.34 |
+```
 
 ---
 
@@ -191,18 +188,20 @@ ORDER BY avg_ptpk DESC
 #### 📋 Query Results
 
 **Formatted Result:**
-| Location       | PTPK  | Lead Distance (km) | Min (km) | Max (km) | Avg (km) |
-|----------------|-------|--------------------|----------|----------|----------|
-| GHATAKPUKUR    | 11.23 | 60                 | 60       | 60       | 60       |
-| NODAKHALI      | 10.71 | 61                 | 61       | 61       | 61       |
-| DOSTIPUR       | 10.69 | 70                 | 70       | 70       | 70       |
-| PIYALI         | 10.46 | 67                 | 67       | 67       | 67       |
-| CHAMPAHATI     | 10.34 | 64                 | 64       | 64       | 64       |
-| FATEHPUR       | 10.32 | 62                 | 62       | 62       | 62       |
-| SIRAKOL        | 10.28 | 60                 | 60       | 60       | 60       |
-| SUBHASHGRAM    | 10.21 | 60                 | 60       | 60       | 60       |
-| DHANPOTA       | 10.17 | 72                 | 72       | 72       | 72       |
-| HARINGHATA     | 10.14 | 63                 | 63       | 63       | 63       |
+```markdown
+| Location    | PTPK | Lead Distance (km) | Min (km) | Max (km) | Avg (km) |
+|-------------|------|--------------------|----------|----------|----------|
+| GHATAKPUKUR | 11.23| 60                 | 60       | 60       | 60       |
+| NODAKHALI   | 10.71| 61                 | 61       | 61       | 61       |
+| DOSTIPUR    | 10.69| 70                 | 70       | 70       | 70       |
+| PIYALI      | 10.46| 67                 | 67       | 67       | 67       |
+| CHAMPAHATI  | 10.34| 64                 | 64       | 64       | 64       |
+| FATEHPUR    | 10.32| 62                 | 62       | 62       | 62       |
+| SIRAKOL     | 10.28| 60                 | 60       | 60       | 60       |
+| SUBHASHGRAM | 10.21| 60                 | 60       | 60       | 60       |
+| DHANPOTA    | 10.17| 72                 | 72       | 72       | 72       |
+| HARINGHATA  | 10.14| 63                 | 63       | 63       | 63       |
+```
 
 ---
 
@@ -255,19 +254,19 @@ ORDER BY vehicle_type, destination_with_shorter_lead_higher_ptpk;
 
 **Formatted Result:**
 ```markdown
-| Destination          | Cost (₹/t-km) | Volume (%) | Lead (km) |
-|----------------------|----------------|------------|-----------|
-| AGARPARA             | 9.63           | 4          | 38        |
-| SONAKHALI            | 8.38           | 5          | 102       |
-| JHARGRAM             | 4.13           | 36         | 174.78    |
-| GAZNA (BAGULA)      | 5.52           | 35         | 130.84    |
-| SWARUPNAGAR         | 7.17           | 6          | 80        |
-| DIAMOND HARBOUR     | 8.23           | 26         | 75        |
-| JAMTALA HAT         | 6.78           | 2          | 102       |
-| CANNING             | 7.91           | 8          | 90        |
-| SUBHASHGRAM         | 8.55           | 5          | 60        |
-| NOORPUR (DH)       | 8.33           | 10         | 74        |
-| KULPI               | 7.45           | 11         | 97        |
+| Destination         | Cost (₹/t-km) | Volume (%) | Lead (km) |
+|---------------------|---------------|------------|-----------|
+| AGARPARA            | 9.63          | 4          | 38        |
+| SONAKHALI           | 8.38          | 5          | 102       |
+| JHARGRAM            | 4.13          | 36         | 174.78    |
+| GAZNA (BAGULA)      | 5.52          | 35         | 130.84    |
+| SWARUPNAGAR         | 7.17          | 6          | 80        |
+| DIAMOND HARBOUR     | 8.23          | 26         | 75        |
+| JAMTALA HAT         | 6.78          | 2          | 102       |
+| CANNING             | 7.91          | 8          | 90        |
+| SUBHASHGRAM         | 8.55          | 5          | 60        |
+| NOORPUR (DH)        | 8.33          | 10         | 74        |
+| KULPI               | 7.45          | 11         | 97        |
 ```
 
 ---
@@ -305,10 +304,10 @@ ORDER BY ptpkRange DESC
 #### 📋 Query Results
 
 **Formatted Result:**
-```
-| Location        | Area          | Road         | Code        |
-|------------------|---------------|--------------|-------------|
-| DANKUNI          | KONNAGAR      | JANAI ROAD   | CHANDITALA-1|
+```markdown
+| Location | Area     | Road       | Code        |
+|----------|----------|------------|-------------|
+| DANKUNI  | KONNAGAR | JANAI ROAD | CHANDITALA-1|
 ```
 
 ---
@@ -384,29 +383,20 @@ ORDER BY sob_percentage DESC;
 #### 📋 Query Results
 
 **Formatted Result:**
-| Origin                     | Destination                | Transporter | SOB   | PTPK  |
-
-|---------------------------|----------------------------|-------------|-------|-------|
-
-| DANKUNI                   | SANTOSHPUR(J)             | 11          | 100%  | 9.14  |
-
-| DANKUNI                   | NAKTALA                   | 11          | 100%  | 11.35 |
-
-| DANKUNI                   | JUMAINASKAR HAT           | 11          | 100%  | 8.08  |
-
-| DANKUNI                   | HOWRAH(CMC)               | 11          | 100%  | 10.23 |
-
-| DANKUNI                   | BELEBERA                  | 7           | 100%  | 3.85  |
-
-| DANKUNI                   | PETBINDHI                 | 7           | 100%  | 4.03  |
-
-| DANKUNI                   | NARAYANGARH               | 7           | 100%  | 4.23  |
-
-| DANKUNI                   | BELPAHARI                 | 7           | 100%  | 3.79  |
-
-| DANKUNI                   | PALPARA (CHAKDAH)         | 2           | 100%  | 7.92  |
-
-| DANKUNI                   | DASGHARA                  | 2           | 100%  | 7.07  |
+```markdown
+| Origin   | Destination        | Transporter | SOB  | PTPK |
+|----------|--------------------|-------------|------|------|
+| DANKUNI  | SANTOSHPUR(J)      | 11          | 100% | 9.14 |
+| DANKUNI  | NAKTALA            | 11          | 100% | 11.35|
+| DANKUNI  | JUMAINASKAR HAT    | 11          | 100% | 8.08 |
+| DANKUNI  | HOWRAH(CMC)        | 11          | 100% | 10.23|
+| DANKUNI  | BELEBERA           | 7           | 100% | 3.85 |
+| DANKUNI  | PETBINDHI          | 7           | 100% | 4.03 |
+| DANKUNI  | NARAYANGARH        | 7           | 100% | 4.23 |
+| DANKUNI  | BELPAHARI          | 7           | 100% | 3.79 |
+| DANKUNI  | PALPARA (CHAKDAH)  | 2           | 100% | 7.92 |
+| DANKUNI  | DASGHARA           | 2           | 100% | 7.07 |
+```
 
 ---
 
@@ -433,29 +423,20 @@ ORDER BY origin, destination, vehicle_type
 #### 📋 Query Results
 
 **Formatted Result:**
+```markdown
 | Outbound Lane | Vehicle Type   | PTPK    |
-
 |---------------|----------------|---------|
-
 | W907          | 12W trucks     | 4.7013  |
-
 |               | 14W+ trucks    | 4.5000  |
-
 | W909          | 10W trucks     | 15.5473 |
-
 |               | 12W trucks     | 14.3009 |
-
-|               | Unspecified     | 15.1960 |
-
+|               | Unspecified    | 15.1960 |
 | W911          | 10W trucks     | 22.5112 |
-
-|               | Unspecified     | 22.3316 |
-
+|               | Unspecified    | 22.3316 |
 | W915          | 10W trucks     | 9.9132  |
-
 |               | 12W trucks     | 9.2873  |
-
 |               | 14W+ trucks    | 8.9250  |
+```
 
 ---
 
@@ -514,9 +495,11 @@ RETURN t.name AS transporter, best_ptpk;
 #### 📋 Query Results
 
 **Formatted Result:**
+```markdown
 | Transporter | PTPK  |
 |-------------|-------|
 | 6           | 12.43 |
+```
 
 ---
 
@@ -535,15 +518,17 @@ Show monthly SOB% of best performing transporter (% of total lane volume for spe
 #### 📋 Query Results
 
 **Formatted Result:**
+```markdown
 | Transporter   | Percentage |
 |---------------|------------|
-| Transporter 1 | 100 %      |
-| Transporter 4 | 100 %      |
-| Transporter 9 | 100 %      |
-| Transporter 12| 100 %      |
-| Transporter 13| 100 %      |
-| Transporter 14| 100 %      |
-| Transporter 19| 100 %      |
+| Transporter 1 | 100%       |
+| Transporter 4 | 100%       |
+| Transporter 9 | 100%       |
+| Transporter 12| 100%       |
+| Transporter 13| 100%       |
+| Transporter 14| 100%       |
+| Transporter 19| 100%       |
+```
 
 ---
 
@@ -601,18 +586,20 @@ RETURN origin,
 #### 📋 Query Results
 
 **Formatted Result:**
+```markdown
 | Route                     | Price Difference (%) |
 |---------------------------|----------------------|
-| DANKUNI → AGARPARA       | 0.00                 |
-| DANKUNI → AHIRITOLA      | 4.92                 |
-| DANKUNI → AIRPORT        | 0.00                 |
-| DANKUNI → AISHTALA       | 0.00                 |
-| DANKUNI → AKAIPUR        | 1.91                 |
-| DANKUNI → ALIPORE        | 2.91                 |
-| DANKUNI → AMDANGA        | 3.33                 |
-| DANKUNI → AMTA           | 1.35                 |
-| DANKUNI → AMTALA         | 4.51                 |
-| DANKUNI → ANDUL          | 0.00                 |
+| DANKUNI → AGARPARA        | 0.00                 |
+| DANKUNI → AHIRITOLA       | 4.92                 |
+| DANKUNI → AIRPORT         | 0.00                 |
+| DANKUNI → AISHTALA        | 0.00                 |
+| DANKUNI → AKAIPUR         | 1.91                 |
+| DANKUNI → ALIPORE         | 2.91                 |
+| DANKUNI → AMDANGA         | 3.33                 |
+| DANKUNI → AMTA            | 1.35                 |
+| DANKUNI → AMTALA          | 4.51                 |
+| DANKUNI → ANDUL           | 0.00                 |
+```
 
 ---
 
@@ -672,18 +659,20 @@ ORDER BY total_freight_saving DESC
 #### 📋 Query Results
 
 **Formatted Result:**
-| Origin          | Destination      | Freight Saving (₹) |
-|------------------|------------------|---------------------|
-| DANKUNI          | GUPTI PARA       | 626,733.13          |
-| DANKUNI          | MAJIGRAM (BURD)  | 167,667.74          |
-| DANKUNI          | SHYAMSUNDAR      | 77,569.50           |
-| DANKUNI          | PARULIA (BWN)    | 73,697.31           |
-| DANKUNI          | NIMTOURI         | 51,508.00           |
-| DANKUNI          | BARUIPUR         | 49,481.74           |
-| DANKUNI          | KHANDAGHOSH      | 41,048.64           |
-| DANKUNI          | KURMUN           | 40,565.10           |
-| DANKUNI          | KHANAKUL         | 37,239.81           |
-| DANKUNI          | MEJHIARY         | 35,699.40           |
+```markdown
+| Origin   | Destination     | Freight Saving (₹) |
+|----------|-----------------|---------------------|
+| DANKUNI  | GUPTI PARA      | 626,733.13          |
+| DANKUNI  | MAJIGRAM (BURD) | 167,667.74          |
+| DANKUNI  | SHYAMSUNDAR     | 77,569.50           |
+| DANKUNI  | PARULIA (BWN)   | 73,697.31           |
+| DANKUNI  | NIMTOURI        | 51,508.00           |
+| DANKUNI  | BARUIPUR        | 49,481.74           |
+| DANKUNI  | KHANDAGHOSH     | 41,048.64           |
+| DANKUNI  | KURMUN          | 40,565.10           |
+| DANKUNI  | KHANAKUL        | 37,239.81           |
+| DANKUNI  | MEJHIARY        | 35,699.40           |
+```
 
 ---
 
@@ -710,6 +699,7 @@ RETURN vehicle_number, vehicle_type, total_km
 #### 📋 Query Results
 
 **Formatted Result:**
+```markdown
 | Vehicle ID   | Wheel Type | Kilometres Travelled |
 |--------------|------------|----------------------|
 | WB25L1255    | 6W         | 5,622 km             |
@@ -722,6 +712,7 @@ RETURN vehicle_number, vehicle_type, total_km
 | WB11F5942    | 6W         | 3,514 km             |
 | WB23E5855    | 12W        | 3,409 km             |
 | WB19F5503    | 10W        | 3,384 km             |
+```
 
 ---
 
@@ -749,18 +740,20 @@ ORDER BY number_of_trips DESC
 #### 📋 Query Results
 
 **Formatted Result:**
+```markdown
 | Vehicle Number | Trip Count | Average Distance per Trip (km) |
-|----------------|------------|---------------------------------|
-| WB07K2405      | 48         | 35                              |
-| WB25L6382      | 46         | 35                              |
-| WB25L5914      | 43         | 35                              |
-| WB25L5851      | 42         | 35                              |
-| WB25L5842      | 39         | 35                              |
-| WB25L5860      | 38         | 35                              |
-| WB25L6132      | 36         | 35                              |
-| WB25L5833      | 35         | 35                              |
-| WB25L6131      | 34         | 35                              |
-| WB25L6373      | 33         | 35                              |
+|----------------|------------|--------------------------------|
+| WB07K2405      | 48         | 35                             |
+| WB25L6382      | 46         | 35                             |
+| WB25L5914      | 43         | 35                             |
+| WB25L5851      | 42         | 35                             |
+| WB25L5842      | 39         | 35                             |
+| WB25L5860      | 38         | 35                             |
+| WB25L6132      | 36         | 35                             |
+| WB25L5833      | 35         | 35                             |
+| WB25L6131      | 34         | 35                             |
+| WB25L6373      | 33         | 35                             |
+```
 
 ---
 
@@ -790,6 +783,7 @@ ORDER BY lane_count DESC
 #### 📋 Query Results
 
 **Formatted Result:**
+```markdown
 | Vehicle Number | Lanes Utilized |
 |----------------|----------------|
 | WB23C6176      | 1              |
@@ -803,6 +797,7 @@ ORDER BY lane_count DESC
 | WB25L6131      | 1              |
 | WB25L5842      | 1              |
 | **Total**      | **10**         |
+```
 
 ---
 
@@ -843,12 +838,14 @@ ORDER BY
 #### 📋 Query Results
 
 **Formatted Result:**
-| Trip Count          | Percentage |
-|---------------------|------------|
-| 0 – 5 trips         | 32.89 %    |
-| 5 – 10 trips        | 14.01 %    |
-| 10 – 15 trips       | 14.01 %    |
-| More than 15 trips  | 39.10 %    |
+```markdown
+| Trip Count         | Percentage |
+|--------------------|------------|
+| 0 – 5 trips        | 32.89 %    |
+| 5 – 10 trips       | 14.01 %    |
+| 10 – 15 trips      | 14.01 %    |
+| More than 15 trips | 39.10 %    |
+```
 
 ---
 
@@ -873,6 +870,7 @@ ORDER BY trips DESC
 #### 📋 Query Results
 
 **Formatted Result:**
+```markdown
 | Item Code   |
 |-------------|
 | WB25K6368   |
@@ -885,6 +883,7 @@ ORDER BY trips DESC
 | WB23D6741   |
 | WB25F1845   |
 | WB15A9282   |
+```
 
 ---
 
@@ -905,10 +904,10 @@ What % of vehicles have done trips on 1, 2-4, 5-10, and >10 lanes per month
 **Formatted Result:**
 ```markdown
 | Month          | 1 Lane (%) | 2-4 Lanes (%) | 5-10 Lanes (%) | >10 Lanes (%) |
-|----------------|------------|----------------|-----------------|----------------|
-| August 2024    | 91.43      | 8.57           | 0               | 0              |
-| September 2024 | 16.46      | 39.11          | 27.22           | 17.22          |
-| October 2024   | 10.32      | 25.74          | 37.01           | 26.93          |
+|----------------|------------|---------------|----------------|---------------|
+| August 2024    | 91.43      | 8.57          | 0              | 0             |
+| September 2024 | 16.46      | 39.11         | 27.22          | 17.22         |
+| October 2024   | 10.32      | 25.74         | 37.01          | 26.93         |
 ```
 
 ---
@@ -940,18 +939,18 @@ RETURN v.vehicle_number AS vehicleNumber,
 
 **Formatted Result:**
 ```markdown
-| Vehicle Number | Route                        | Transporter  | Number of Trips |
-|----------------|------------------------------|--------------|------------------|
-| WB15A8390      | DANKUNI - BALIGORI           | Transporter 2| 19               |
-| WB15A8390      | DANKUNI - BALIGORI           | Transporter 15| 19              |
-| WB15B4523      | DANKUNI - BALIGORI           | Transporter 2| 19               |
-| WB15B4523      | DANKUNI - BALIGORI           | Transporter 15| 19              |
-| WB15A9532      | DANKUNI - BALIGORI           | Transporter 2| 11               |
-| WB15A9532      | DANKUNI - BALIGORI           | Transporter 15| 11              |
-| WB23C7560      | DANKUNI - BARRACKPORE        | Transporter 4| 1                |
-| WB23F6589      | DANKUNI - RAJARHAT NEW TOWN  | Transporter 12| 5               |
-| WB23F5668      | DANKUNI - RAJARHAT NEW TOWN  | Transporter 22| 1               |
-| WB11D0495      | DANKUNI - SREERAMPUR         | Transporter 4| 54               |
+| Vehicle Number | Route                       | Transporter   | Number of Trips |
+|----------------|-----------------------------|---------------|-----------------|
+| WB15A8390      | DANKUNI - BALIGORI          | Transporter 2 | 19              |
+| WB15A8390      | DANKUNI - BALIGORI          | Transporter 15| 19              |
+| WB15B4523      | DANKUNI - BALIGORI          | Transporter 2 | 19              |
+| WB15B4523      | DANKUNI - BALIGORI          | Transporter 15| 19              |
+| WB15A9532      | DANKUNI - BALIGORI          | Transporter 2 | 11              |
+| WB15A9532      | DANKUNI - BALIGORI          | Transporter 15| 11              |
+| WB23C7560      | DANKUNI - BARRACKPORE       | Transporter 4 | 1               |
+| WB23F6589      | DANKUNI - RAJARHAT NEW TOWN | Transporter 12| 5               |
+| WB23F5668      | DANKUNI - RAJARHAT NEW TOWN | Transporter 22| 1               |
+| WB11D0495      | DANKUNI - SREERAMPUR        | Transporter 4 | 54              |
 ```
 
 ---
@@ -997,12 +996,14 @@ ORDER BY CASE distance_bucket
 #### 📋 Query Results
 
 **Formatted Result:**
+```markdown
 | Distance Range     | Percentage of Vehicles |
-|---------------------|-----------------------|
-| 0 – 500 km          | 43.26 %               |
-| 500 – 1000 km      | 19.95 %               |
-| 1000 – 2000 km     | 26.68 %               |
-| > 2000 km          | 10.11 %               |
+|--------------------|------------------------|
+| 0 – 500 km         | 43.26 %                |
+| 500 – 1000 km      | 19.95 %                |
+| 1000 – 2000 km     | 26.68 %                |
+| > 2000 km          | 10.11 %                |
+```
 
 ---
 
@@ -1036,18 +1037,20 @@ ORDER BY totalDistanceKm DESC;
 #### 📋 Query Results
 
 **Formatted Result:**
-| Vehicle ID   | Transporter  | Trips | Average Lead Distance (km) |
-|--------------|--------------|-------|-----------------------------|
-| WB25L1255    | Transporter 3| 52    | 130.00                      |
-| WB11F8931    | Transporter 1| 47    | 134.51                      |
-| WB25L0212    | Transporter 3| 42    | 129.45                      |
-| WB25L2465    | Transporter 3| 41    | 130.00                      |
-| WB59C6972    | Transporter 3| 30    | 155.43                      |
-| WB19F7384    | Transporter 3| 30    | 146.50                      |
-| WB03C9043    | Transporter 18| 41   | 89.17                       |
-| WB11F5942    | Transporter 1| 39    | 111.62                      |
-| WB23E5855    | Transporter 12| 39   | 91.15                       |
-| WB19F5503    | Transporter 11| 56   | 64.09                       |
+```markdown
+| Vehicle ID   | Transporter   | Trips | Average Lead Distance (km) |
+|--------------|---------------|-------|-----------------------------|
+| WB25L1255    | Transporter 3 | 52    | 130.00                      |
+| WB11F8931    | Transporter 1 | 47    | 134.51                      |
+| WB25L0212    | Transporter 3 | 42    | 129.45                      |
+| WB25L2465    | Transporter 3 | 41    | 130.00                      |
+| WB59C6972    | Transporter 3 | 30    | 155.43                      |
+| WB19F7384    | Transporter 3 | 30    | 146.50                      |
+| WB03C9043    | Transporter 18| 41    | 89.17                       |
+| WB11F5942    | Transporter 1 | 39    | 111.62                      |
+| WB23E5855    | Transporter 12| 39    | 91.15                       |
+| WB19F5503    | Transporter 11| 56    | 64.09                       |
+```
 
 ---
 
@@ -1074,10 +1077,12 @@ RETURN avg(tm.parking_duration_hr) AS averageParkingWaitingTime,
 #### 📋 Query Results
 
 **Formatted Result:**
+```
 | Metric                | Time (minutes) |
 |-----------------------|----------------|
-| Average Waiting Time   | 15.92          |
-| Median Waiting Time    | 12.05          |
+| Average Waiting Time  | 15.92          |
+| Median Waiting Time   | 12.05          |
+```
 
 ---
 
@@ -1114,12 +1119,14 @@ ORDER BY vehicle_type;
 #### 📋 Query Results
 
 **Formatted Result:**
+```markdown
 | Vehicle Type | Average Waiting Time (hours) | Median Waiting Time (hours) |
-|--------------|-------------------------------|------------------------------|
-| 6W           | 10.88                         | 6.65                         |
-| 10W          | 17.18                         | 10.93                        |
-| 12W          | 22.87                         | 16.61                        |
-| 14W+         | 19.36                         | 10.39                        |
+|--------------|------------------------------|-----------------------------|
+| 6W           | 10.88                        | 6.65                        |
+| 10W          | 17.18                        | 10.93                       |
+| 12W          | 22.87                        | 16.61                       |
+| 14W+         | 19.36                        | 10.39                       |
+```
 
 ---
 
@@ -1155,18 +1162,20 @@ ORDER BY period, year, time_unit;
 #### 📋 Query Results
 
 **Formatted Result:**
-| Week  | Average Hours (Avg) | Median Hours (Median) |
-|-------|---------------------|-----------------------|
-| 36    | 10.50               | 5.40                  |
-| 37    | 9.18                | 4.26                  |
-| 38    | 10.54               | 4.44                  |
-| 39    | 8.61                | 5.15                  |
-| 40    | 7.88                | 4.26                  |
-| 41    | 9.75                | 4.03                  |
-| 42    | 6.61                | 3.33                  |
-| 43    | 14.08               | 6.37                  |
-| 44    | 6.53                | 3.35                  |
-| 45    | 8.64                | 3.13                  |
+```markdown
+| Week | Average Hours (Avg) | Median Hours (Median) |
+|------|---------------------|-----------------------|
+| 36   | 10.50               | 5.40                  |
+| 37   | 9.18                | 4.26                  |
+| 38   | 10.54               | 4.44                  |
+| 39   | 8.61                | 5.15                  |
+| 40   | 7.88                | 4.26                  |
+| 41   | 9.75                | 4.03                  |
+| 42   | 6.61                | 3.33                  |
+| 43   | 14.08               | 6.37                  |
+| 44   | 6.53                | 3.35                  |
+| 45   | 8.64                | 3.13                  |
+```
 
 ---
 
@@ -1188,10 +1197,12 @@ RETURN avg(tm.loading_duration_hr) AS average_loading_time_hr,
 #### 📋 Query Results
 
 **Formatted Result:**
-| Metric            | Time (hours) |
-|-------------------|--------------|
-| Average Loading Time | 1.21         |
-| Median Loading Time  | 1.16         |
+```markdown
+| Metric              | Time (hours) |
+|---------------------|--------------|
+| Average Loading Time| 1.21         |
+| Median Loading Time | 1.16         |
+```
 
 ---
 
@@ -1215,13 +1226,15 @@ ORDER BY vehicle_type
 #### 📋 Query Results
 
 **Formatted Result:**
-| Vehicle Type        | Average Loading Time (hr) | Median Loading Time (hr) |
-|---------------------|---------------------------|---------------------------|
-| 10W                 | 1.28                      | 1.17                      |
-| 12W                 | 1.30                      | 1.25                      |
-| 14W+                | 1.57                      | 1.34                      |
-| 6W                  | 1.16                      | 1.13                      |
-| Unspecified Vehicle  | 1.13                      | 1.14                      |
+```markdown
+| Vehicle Type         | Average Loading Time (hr) | Median Loading Time (hr) |
+|----------------------|---------------------------|--------------------------|
+| 10W                  | 1.28                      | 1.17                     |
+| 12W                  | 1.30                      | 1.25                     |
+| 14W+                 | 1.57                      | 1.34                     |
+| 6W                   | 1.16                      | 1.13                     |
+| Unspecified Vehicle  | 1.13                      | 1.14                     |
+```
 
 ---
 
@@ -1243,16 +1256,16 @@ Cypher query not found in intermediate steps
 ```markdown
 | Vehicle Type | Month | Loading Time (h) |
 |--------------|-------|------------------|
-| 14W+        | Sep   | 1.76             |
-| 14W+        | Oct   | 1.51             |
-| 14W+        | Nov   | 1.46             |
-| 10W         | Aug   | 2.99             |
-| 10W         | Sep   | 1.15             |
-| 10W         | Oct   | 1.28             |
-| 10W         | Nov   | 1.38             |
-| 12W         | Sep   | 1.26             |
-| 12W         | Oct   | 1.26             |
-| 12W         | Nov   | 1.36             |
+| 14W+         | Sep   | 1.76             |
+| 14W+         | Oct   | 1.51             |
+| 14W+         | Nov   | 1.46             |
+| 10W          | Aug   | 2.99             |
+| 10W          | Sep   | 1.15             |
+| 10W          | Oct   | 1.28             |
+| 10W          | Nov   | 1.38             |
+| 12W          | Sep   | 1.26             |
+| 12W          | Oct   | 1.26             |
+| 12W          | Nov   | 1.36             |
 ```
 
 ---
@@ -1282,10 +1295,12 @@ RETURN avg(transit_hours) AS average_transit_time_hours,
 #### 📋 Query Results
 
 **Formatted Result:**
+```markdown
 | Transit Time Type | Duration (hours) |
 |-------------------|------------------|
 | Average           | 9.69             |
 | Median            | 8.68             |
+```
 
 ---
 
@@ -1318,11 +1333,13 @@ RETURN vehicle_type,
 #### 📋 Query Results
 
 **Formatted Result:**
+```markdown
 | Metric               | Value     |
 |----------------------|-----------|
 | Average Transit Time | 10.26 hrs |
 | Median Transit Time  | 9.32 hrs  |
 | Trip Count           | 214       |
+```
 
 ---
 
@@ -1356,18 +1373,20 @@ ORDER BY trip_count DESC;
 #### 📋 Query Results
 
 **Formatted Result:**
+```markdown
 | Transporter | Average Time (hours) | Median Time (hours) | Number of Trips |
-|-------------|----------------------|---------------------|------------------|
-| 15          | 9.71                 | 7.25                | 453              |
-| 1           | 14.37                | 11.38               | 146              |
-| 6           | 17.86                | 10.60               | 33               |
-| 14          | 11.04                | 10.73               | 30               |
-| 5           | 12.31                | 8.75                | 24               |
-| 12          | 12.30                | 10.56               | 14               |
-| 16          | 4.60                 | 4.53                | 4                |
-| 3           | 18.24                | 17.47               | 4                |
-| 8           | 30.48                | 27.70               | 3                |
-| 4           | 6.22                 | 6.22                | 2                |
+|-------------|----------------------|---------------------|-----------------|
+| 15          | 9.71                 | 7.25                | 453             |
+| 1           | 14.37                | 11.38               | 146             |
+| 6           | 17.86                | 10.60               | 33              |
+| 14          | 11.04                | 10.73               | 30              |
+| 5           | 12.31                | 8.75                | 24              |
+| 12          | 12.30                | 10.56               | 14              |
+| 16          | 4.60                 | 4.53                | 4               |
+| 3           | 18.24                | 17.47               | 4               |
+| 8           | 30.48                | 27.70               | 3               |
+| 4           | 6.22                 | 6.22                | 2               |
+```
 
 ---
 
@@ -1410,13 +1429,15 @@ ORDER BY dispatch_window;
 #### 📋 Query Results
 
 **Formatted Result:**
+```markdown
 | Dispatch Window | Average Transit Time (hours) | Median Transit Time (hours) | Trip Count |
-|------------------|------------------------------|------------------------------|------------|
-| 06:00 – 10:00    | 13.49                        | 14.32                        | 51         |
-| 10:00 – 14:00    | 8.87                         | 8.15                         | 183        |
-| 14:00 – 18:00    | 6.99                         | 6.32                         | 283        |
-| 18:00 – 22:00    | 7.58                         | 5.40                         | 118        |
-| 22:00 – 06:00    | 14.09                        | 16.73                        | 80         |
+|-----------------|------------------------------|-----------------------------|------------|
+| 06:00 – 10:00   | 13.49                        | 14.32                       | 51         |
+| 10:00 – 14:00   | 8.87                         | 8.15                        | 183        |
+| 14:00 – 18:00   | 6.99                         | 6.32                        | 283        |
+| 18:00 – 22:00   | 7.58                         | 5.40                        | 118        |
+| 22:00 – 06:00   | 14.09                        | 16.73                       | 80         |
+```
 
 ---
 
@@ -1437,23 +1458,23 @@ Show weekly/monthly trend of average and median transit time for 6W vehicles fro
 **Formatted Result:**
 ```markdown
 | Week Starting   | Average Transit Hours | Median Transit Hours |
-|------------------|----------------------|----------------------|
-| 26 Aug 2024      | 8.7                  | 6.1                  |
-| 2 Sep 2024       | 12.3                 | 12.3                 |
-| 9 Sep 2024       | 7.1                  | 7.9                  |
-| 16 Sep 2024      | 10.6                 | 11.9                 |
-| 23 Sep 2024      | 11.0                 | 9.7                  |
-| 30 Sep 2024      | 9.0                  | 7.7                  |
-| 7 Oct 2024       | 15.9                 | 16.1                 |
-| 14 Oct 2024      | 9.3                  | 7.5                  |
-| 21 Oct 2024      | 11.0                 | 9.6                  |
-| 28 Oct 2024      | 12.4                 | 11.3                 |
+|-----------------|-----------------------|----------------------|
+| 26 Aug 2024     | 8.7                   | 6.1                  |
+| 2 Sep 2024      | 12.3                  | 12.3                 |
+| 9 Sep 2024      | 7.1                   | 7.9                  |
+| 16 Sep 2024     | 10.6                  | 11.9                 |
+| 23 Sep 2024     | 11.0                  | 9.7                  |
+| 30 Sep 2024     | 9.0                   | 7.7                  |
+| 7 Oct 2024      | 15.9                  | 16.1                 |
+| 14 Oct 2024     | 9.3                   | 7.5                  |
+| 21 Oct 2024     | 11.0                  | 9.6                  |
+| 28 Oct 2024     | 12.4                  | 11.3                 |
 
-| Month            | Average Transit Hours | Median Transit Hours |
-|------------------|----------------------|----------------------|
-| August 2024      | 8.7                  | 6.1                  |
-| September 2024   | 10.0                 | 9.9                  |
-| October 2024     | 12.2                 | 11.1                 |
+| Month           | Average Transit Hours | Median Transit Hours |
+|-----------------|-----------------------|----------------------|
+| August 2024     | 8.7                   | 6.1                  |
+| September 2024  | 10.0                  | 9.9                  |
+| October 2024    | 12.2                  | 11.1                 |
 ```
 
 ---
@@ -1494,7 +1515,7 @@ RETURN t.name AS transporter,
 #### 📋 Query Results
 
 **Formatted Result:**
-```
+```markdown
 | Transporter |
 |-------------|
 | 14          |
@@ -1550,7 +1571,7 @@ RETURN CASE
 #### 📋 Query Results
 
 **Formatted Result:**
-```
+```markdown
 | Trip Origin | Trip Destination | Ideal Window Percentage |
 |-------------|------------------|-------------------------|
 | Dankuni     | Tiljala          | 0.0%                    |
@@ -1574,9 +1595,11 @@ RETURN avg(t.unloading_duration_hr) AS average_unloading_time
 #### 📋 Query Results
 
 **Formatted Result:**
-| Metric                  | Value                |
-|-------------------------|----------------------|
-| Average Unloading Time  | 4.55                 |
+```markdown
+| Metric                 | Value |
+|------------------------|-------|
+| Average Unloading Time | 4.55  |
+```
 
 ---
 
@@ -1600,6 +1623,7 @@ ORDER BY avg_unloading_time_hr DESC
 #### 📋 Query Results
 
 **Formatted Result:**
+```markdown
 | Task  | Duration (hr) |
 |-------|---------------|
 | STO   | 14.55         |
@@ -1607,6 +1631,7 @@ ORDER BY avg_unloading_time_hr DESC
 | TRD   | 2.35          |
 | RMC   | 2.31          |
 | KEY   | 1.63          |
+```
 
 ---
 
@@ -1639,18 +1664,20 @@ ORDER BY customer_group, avg_unloading_time DESC
 #### 📋 Query Results
 
 **Formatted Result:**
+```markdown
 | Customer Group   | Customer Name   | Unloading Time (hrs) |
-|------------------|------------------|-----------------------|
-| KEY              | HARIT            | 9.91                  |
-|                  | BHANGAR          | 3.4725                |
-|                  | NANDAKUMAR       | 3.4325                |
-|                  | JAGACHA          | 1.1575                |
-|                  | DOMJUR           | 0.5965                |
-| NTRD             | ARAMBAGH         | 16.8667               |
-|                  | HARINGHATA       | 11.6363               |
-|                  | RAICHAK          | 11.25                 |
-|                  | SAMUDRAGARH      | 9.0                   |
-|                  | DULAGARH         | 8.7527                |
+|------------------|-----------------|----------------------|
+| KEY              | HARIT           | 9.91                 |
+|                  | BHANGAR         | 3.4725               |
+|                  | NANDAKUMAR      | 3.4325               |
+|                  | JAGACHA         | 1.1575               |
+|                  | DOMJUR          | 0.5965               |
+| NTRD             | ARAMBAGH        | 16.8667              |
+|                  | HARINGHATA      | 11.6363              |
+|                  | RAICHAK         | 11.25                |
+|                  | SAMUDRAGARH     | 9.0                  |
+|                  | DULAGARH        | 8.7527               |
+```
 
 ---
 
@@ -1683,12 +1710,14 @@ ORDER BY time_window;
 #### 📋 Query Results
 
 **Formatted Result:**
+```markdown
 | Time Window      | Average Unloading Duration (hours) |
-|------------------|-------------------------------------|
-| 6 AM – 10 AM     | 3.7                                 |
-| 10 AM – 2 PM     | 3.1                                 |
-| 10 PM – 2 AM     | 5.3                                 |
-| Other times      | 5.6                                 |
+|------------------|------------------------------------|
+| 6 AM – 10 AM     | 3.7                                |
+| 10 AM – 2 PM     | 3.1                                |
+| 10 PM – 2 AM     | 5.3                                |
+| Other times      | 5.6                                |
+```
 
 ---
 
@@ -1718,9 +1747,11 @@ LIMIT 1
 #### 📋 Query Results
 
 **Formatted Result:**
-| Activity          | Start Time | Average Duration | Ideal Window         |
-|-------------------|------------|------------------|----------------------|
-| Unloading         | 12:00 PM   | 7 minutes        | 12:00 PM – 12:07 PM  |
+```markdown
+| Activity  | Start Time | Average Duration | Ideal Window        |
+|-----------|------------|------------------|---------------------|
+| Unloading | 12:00 PM   | 7 minutes        | 12:00 PM – 12:07 PM |
+```
 
 ---
 
@@ -1745,8 +1776,11 @@ RETURN CASE
 
 #### 📋 Query Results
 
+**Formatted Result:**
 ```
-0%
+| Query                                      | Result |
+|--------------------------------------------|--------|
+| What % of trips reach Tiljala during the ideal unloading time window | 0%     |
 ```
 
 ---
@@ -1768,23 +1802,23 @@ Show weekly/monthly trend of unloading time for 6W vehicles reaching Tiljala. Co
 **Formatted Result:**
 ```markdown
 | Week Starting      | Average Unloading Time (hours) |
-|--------------------|---------------------------------|
-| 16 Sep 2024        | 0.87                            |
-| 23 Sep 2024        | 1.22                            |
-| 30 Sep 2024        | 1.29                            |
-| 07 Oct 2024        | 0.99                            |
-| 14 Oct 2024        | 2.74                            |
-| 21 Oct 2024        | 1.29                            |
-| 28 Oct 2024        | 1.08                            |
-| 04 Nov 2024        | 2.84                            |
-| 11 Nov 2024        | 1.98                            |
-| 18 Nov 2024        | 3.25                            |
+|--------------------|--------------------------------|
+| 16 Sep 2024        | 0.87                           |
+| 23 Sep 2024        | 1.22                           |
+| 30 Sep 2024        | 1.29                           |
+| 07 Oct 2024        | 0.99                           |
+| 14 Oct 2024        | 2.74                           |
+| 21 Oct 2024        | 1.29                           |
+| 28 Oct 2024        | 1.08                           |
+| 04 Nov 2024        | 2.84                           |
+| 11 Nov 2024        | 1.98                           |
+| 18 Nov 2024        | 3.25                           |
 
 | Month              | Average Unloading Time (hours) |
-|--------------------|---------------------------------|
-| September 2024     | 1.13                            |
-| October 2024       | 1.52                            |
-| November 2024      | 2.69                            |
+|--------------------|--------------------------------|
+| September 2024     | 1.13                           |
+| October 2024       | 1.52                           |
+| November 2024      | 2.69                           |
 ```
 
 ---
@@ -1861,13 +1895,15 @@ ORDER BY total_volume DESC;
 #### 📋 Query Results
 
 **Formatted Result:**
-| Lane                     | Dispatch Volume (%) | MoM Trend (%) |
-|--------------------------|---------------------|----------------|
-| DANKUNI → MAIPITH       | 4.1                 | -7.45          |
-| DANKUNI → GHATAKPUKUR   | 3.6                 | -31.49         |
-| DANKUNI → BARUIPUR      | 3.52                | -44.67         |
-| DANKUNI → SHALIMAR      | 3.37                | +78.6          |
-| DANKUNI → JHARKHALI     | 3.23                | -12.65         |
+```markdown
+| Lane                   | Dispatch Volume (%) | MoM Trend (%) |
+|------------------------|---------------------|---------------|
+| DANKUNI → MAIPITH      | 4.1                 | -7.45         |
+| DANKUNI → GHATAKPUKUR  | 3.6                 | -31.49        |
+| DANKUNI → BARUIPUR     | 3.52                | -44.67        |
+| DANKUNI → SHALIMAR     | 3.37                | +78.6         |
+| DANKUNI → JHARKHALI    | 3.23                | -12.65        |
+```
 
 ---
 
@@ -1888,12 +1924,12 @@ Which are the top 5 lanes by freight spend for 6W vehicles? Show % of total spen
 **Formatted Result:**
 ```markdown
 | Lane                  | % of Total Freight Spend | Aug-24   | Sep-24   | Oct-24   | Nov-24   |
-|-----------------------|-------------------------|----------|----------|----------|----------|
-| DANKUNI → MAIPITH    | 6.65                    | ₹11,132  | ₹501,746 | ₹1,737,509 | ₹1,607,091 |
-| DANKUNI → JOGESGANJ  | 4.93                    | ₹10,802  | ₹631,444 | ₹1,200,157 | ₹1,021,853 |
-| DANKUNI → JHARKHALI  | 4.47                    | ₹19,140  | ₹324,836 | ₹1,203,618 | ₹1,049,090 |
-| DANKUNI → GHATAKPUKUR| 3.87                    | ₹37,576  | ₹343,660 | ₹1,112,720 | ₹753,669   |
-| DANKUNI → BARUIPUR   | 3.57                    | ₹42,570  | ₹324,941 | ₹1,103,624 | ₹603,635   |
+|-----------------------|--------------------------|----------|----------|----------|----------|
+| DANKUNI → MAIPITH     | 6.65                     | ₹11,132  | ₹501,746 | ₹1,737,509 | ₹1,607,091 |
+| DANKUNI → JOGESGANJ   | 4.93                     | ₹10,802  | ₹631,444 | ₹1,200,157 | ₹1,021,853 |
+| DANKUNI → JHARKHALI   | 4.47                     | ₹19,140  | ₹324,836 | ₹1,203,618 | ₹1,049,090 |
+| DANKUNI → GHATAKPUKUR | 3.87                     | ₹37,576  | ₹343,660 | ₹1,112,720 | ₹753,669   |
+| DANKUNI → BARUIPUR    | 3.57                     | ₹42,570  | ₹324,941 | ₹1,103,624 | ₹603,635   |
 ```
 
 ---
@@ -1917,9 +1953,9 @@ RETURN count(d) AS total_trips
 
 **Formatted Result:**
 ```
-| Route                | Vehicle Type | Total Trips |
-|----------------------|--------------|-------------|
-| Dankuni to Tiljala   | 6W           |           0 |
+| Route              | Vehicle Type | Total Trips |
+|--------------------|--------------|-------------|
+| Dankuni to Tiljala | 6W           |           0 |
 ```
 
 ---
@@ -1946,12 +1982,14 @@ ORDER BY trips DESC;
 #### 📋 Query Results
 
 **Formatted Result:**
-| Vehicle Type        | Number of Trips |
-|---------------------|-----------------|
-| Unknown             | 480             |
-| 6W                  | 214             |
-| 10W                 | 15              |
-| 12W                 | 6               |
+```markdown
+| Vehicle Type | Number of Trips |
+|--------------|-----------------|
+| Unknown      | 480             |
+| 6W           | 214             |
+| 10W          | 15              |
+| 12W          | 6               |
+```
 
 ---
 
@@ -1977,6 +2015,7 @@ RETURN t.name AS transporter, count(d) AS trips
 #### 📋 Query Results
 
 **Formatted Result:**
+```markdown
 | Transporter | Trips |
 |-------------|-------|
 | 1           | 135   |
@@ -1988,6 +2027,7 @@ RETURN t.name AS transporter, count(d) AS trips
 | 12          | 11    |
 | 14          | 26    |
 | 16          | 3     |
+```
 
 ---
 
@@ -2015,6 +2055,7 @@ ORDER BY trips DESC
 #### 📋 Query Results
 
 **Formatted Result:**
+```markdown
 | Customer ID | Number of Trips |
 |-------------|-----------------|
 | 109         | 68              |
@@ -2027,6 +2068,7 @@ ORDER BY trips DESC
 | 8           | 5               |
 | 598         | 5               |
 | 415         | 4               |
+```
 
 ---
 
@@ -2053,6 +2095,7 @@ ORDER BY tripCount DESC
 #### 📋 Query Results
 
 **Formatted Result:**
+```
 | Code       | Trips |
 |------------|-------|
 | WB07K2405  |    48 |
@@ -2065,6 +2108,7 @@ ORDER BY tripCount DESC
 | WB25L2111  |     7 |
 | WB19F7135  |     7 |
 | WB25L2011  |     6 |
+```
 
 ---
 
@@ -2089,12 +2133,14 @@ ORDER BY vehicle_count DESC
 #### 📋 Query Results
 
 **Formatted Result:**
+```
 | Vehicle Type | Deliveries |
 |--------------|------------|
 | 6W           | 53         |
 | None         | 23         |
 | 10W          | 11         |
 | 12W          | 4          |
+```
 
 ---
 
@@ -2121,20 +2167,22 @@ RETURN size(stats) AS distinct_transporters,
 #### 📋 Query Results
 
 **Formatted Result:**
+```markdown
 | Transporter   | Trips | Tonnage (t) |
-|---------------|-------|--------------|
-| Transporter 1 |   146 |        1,803 |
-| Transporter 5 |    24 |          273 |
-| Transporter 15|   453 |        5,944 |
-| Transporter 12|    14 |          178 |
-| Transporter 6 |    33 |          433 |
-| Transporter 4 |     2 |           22 |
-| Transporter 8 |     3 |           55 |
-| Transporter 14|    30 |          352 |
-| Transporter 16|     4 |           52 |
-| Transporter 3 |     4 |           44 |
-| Transporter 9 |     1 |           11 |
-| Transporter 22|     1 |           11 |
+|---------------|-------|-------------|
+| Transporter 1 |   146 |       1,803 |
+| Transporter 5 |    24 |         273 |
+| Transporter 15|   453 |       5,944 |
+| Transporter 12|    14 |         178 |
+| Transporter 6 |    33 |         433 |
+| Transporter 4 |     2 |          22 |
+| Transporter 8 |     3 |          55 |
+| Transporter 14|    30 |         352 |
+| Transporter 16|     4 |          52 |
+| Transporter 3 |     4 |          44 |
+| Transporter 9 |     1 |          11 |
+| Transporter 22|     1 |          11 |
+```
 
 ---
 
@@ -2164,18 +2212,20 @@ ORDER BY volume DESC
 #### 📋 Query Results
 
 **Formatted Result:**
-| Origin          | Destination       | Volume (units) |
-|------------------|-------------------|-----------------|
-| DANKUNI          | GUPTI PARA        | 1,414.0         |
-| DANKUNI          | MAJIGRAM (BURD)   | 281.0           |
-| DANKUNI          | SHYAMSUNDAR       | 160.0           |
-| DANKUNI          | PARULIA(BWN)      | 144.0           |
-| DANKUNI          | NIMTOURI          | 108.0           |
-| DANKUNI          | KHANAKUL          | 83.0            |
-| DANKUNI          | KURMUN            | 82.0            |
-| DANKUNI          | KHANDAGHOSH       | 78.0            |
-| DANKUNI          | BULBULITALA       | 70.0            |
-| DANKUNI          | BHATAR            | 66.0            |
+```markdown
+| Origin   | Destination     | Volume (units) |
+|----------|-----------------|----------------|
+| DANKUNI  | GUPTI PARA      | 1,414.0        |
+| DANKUNI  | MAJIGRAM (BURD) | 281.0          |
+| DANKUNI  | SHYAMSUNDAR     | 160.0          |
+| DANKUNI  | PARULIA(BWN)    | 144.0          |
+| DANKUNI  | NIMTOURI        | 108.0          |
+| DANKUNI  | KHANAKUL        | 83.0           |
+| DANKUNI  | KURMUN          | 82.0           |
+| DANKUNI  | KHANDAGHOSH     | 78.0           |
+| DANKUNI  | BULBULITALA     | 70.0           |
+| DANKUNI  | BHATAR          | 66.0           |
+```
 
 ---
 
@@ -2245,24 +2295,26 @@ ORDER BY sob_percentage DESC
 #### 📋 Query Results
 
 **Formatted Result:**
+```markdown
 | Origin   | Destination               | Percentage |
 |----------|---------------------------|------------|
 | DANKUNI  | SANTOSHPUR(J)             | 100%       |
 | DANKUNI  | NAKTALA                   | 100%       |
-| DANKUNI  | JUMAINASKAR HAT          | 100%       |
-| DANKUNI  | HOWRAH(CMC)              | 100%       |
+| DANKUNI  | JUMAINASKAR HAT           | 100%       |
+| DANKUNI  | HOWRAH(CMC)               | 100%       |
 | DANKUNI  | BELEBERA                  | 100%       |
 | DANKUNI  | PETBINDHI                 | 100%       |
-| DANKUNI  | NARAYANGARH              | 100%       |
+| DANKUNI  | NARAYANGARH               | 100%       |
 | DANKUNI  | BELPAHARI                 | 100%       |
-| DANKUNI  | PALPARA (CHAKDAH)        | 100%       |
+| DANKUNI  | PALPARA (CHAKDAH)         | 100%       |
 | DANKUNI  | DASGHARA                  | 100%       |
+```
 
 ---
 
 ## 📋 Report Information
 
-- **Source Checkpoint:** `freight_queries_all_prompts_checkpoint.csv`
-- **Report Generated:** 2025-06-28 14:34:31
+- **Source Checkpoint:** `.\freight_queries_all_prompts_checkpoint_formatted.csv`
+- **Report Generated:** 2025-06-29 13:20:13
 - **Total Entries Processed:** 57
-- **Markdown File:** `freight_queries_all_prompts_report.md`
+- **Markdown File:** `freight_queries_all_prompts_formatted_report.md`
